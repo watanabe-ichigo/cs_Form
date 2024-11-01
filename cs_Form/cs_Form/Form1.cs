@@ -16,9 +16,52 @@ namespace cs_Form
         {
             InitializeComponent();
 
-            TestButton testButton = new TestButton();
+            /*TestButton testButton = new TestButton(0,0,100,100);
 
             Controls.Add(testButton);
+
+            TestButton testButton2 = new TestButton(100,100,100,100);
+
+            Controls.Add(testButton2);*/
+
+            int a;
+
+            /*for (a = 1;  a < 10; a++)
+             {
+                 int b;
+                 b = 0;
+                 int c;
+                 c = 0;
+                 int d;
+                 d = 0;
+                 int e = 0;
+                 TestButton testButton = new TestButton(b, c, d, e);
+
+                 Controls.Add(testButton);
+
+                 b = +10;
+                 c = +10;
+                 d = +10;
+                 e = +10;
+
+             }*/
+            for (a = 1; a < 10; a++)
+            {
+               
+                TestButton testButton = new TestButton(a*10, 0, 100, 100);
+
+                Controls.Add(testButton);
+
+              
+
+            }
+            
+
+
+
+
+
+
         }
     }
 }
