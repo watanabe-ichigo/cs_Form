@@ -45,10 +45,11 @@ namespace cs_Form
                  e = +10;
 
              }*/
-            for (a = 1; a < 10; a++)
+
+            for (a = 0; a < 1000; a++)
             {
-               
-                TestButton testButton = new TestButton(a*10, 0, 100, 100);
+
+                TestButton testButton = new TestButton((a % 100) * 100, (a / 100) * 100, 100, 100, a);
 
                 Controls.Add(testButton);
 
