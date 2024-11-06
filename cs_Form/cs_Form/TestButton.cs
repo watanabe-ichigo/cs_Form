@@ -10,8 +10,14 @@ namespace cs_Form
 {
     internal class TestButton : Button
     {
-        public TestButton(int x,int y, int widht, int height, int id )
+        Form1 _form1;
+
+
+        public TestButton( Form1 form1,int x,int y, int widht, int height, int id )
         {
+
+            _form1= form1;
+
             //ClickイベントにOnClick関数を登録
             //ボタンをクリックした時に登録した関数を実行します。
             Click += OnClick;
@@ -43,7 +49,7 @@ namespace cs_Form
         public void OnClick(object sender, EventArgs s)
         {
 
-            MessageBox.Show(Text);
+            _form1.LabelTextUpdate(Text);
             //int k = 0;
             //for (k = 0; k > 1000; k++)
             //{

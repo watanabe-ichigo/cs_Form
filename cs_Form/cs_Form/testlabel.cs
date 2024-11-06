@@ -23,5 +23,14 @@ namespace cs_Form
             //ボタンの大きさ
             Size = new Size(widht, height);
         }
+        /// <summary>
+        /// ラベルの文字更新関数
+        /// </summary>
+        /// <param name="str"></param>
+        public void TextUpdate(string str)
+        {
+            Text += str;
+        }
     }
+
 }

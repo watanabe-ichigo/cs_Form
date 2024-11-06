@@ -10,8 +10,14 @@ using System.Windows.Forms;
 
 namespace cs_Form
 {
+
+    
+
     public partial class Form1 : Form
     {
+
+        testlabel _testLabel;
+
         public Form1()
         {
             InitializeComponent();
@@ -49,7 +55,7 @@ namespace cs_Form
             for (a = 0; a < 10; a++)
             {
 
-                TestButton testButton = new TestButton((a % 5) * 100, (a / 5) * 100, 100, 100, a);
+                TestButton testButton = new TestButton(this,(a % 5) * 100, (a / 5) * 100, 100, 100, a);
 
                 Controls.Add(testButton);
 
@@ -57,8 +63,8 @@ namespace cs_Form
                 
             }
 
-            testlabel testLabel = new testlabel("ラベルです", 10, 300, 100, 500);
-            Controls.Add(testLabel);
+             _testLabel = new testlabel("ラベルです", 10, 300, 100, 500);
+            Controls.Add(_testLabel);
 
             //Label label = new Label();
             //label.Location = new Point(30, 400);
@@ -66,11 +72,11 @@ namespace cs_Form
             //Controls.Add(label);
             
 
+        }
 
-
-
-
-
+        public void LabelTextUpdate(string str)
+        {
+            _testLabel.TextUpdate(str);
         }
     }
 }
