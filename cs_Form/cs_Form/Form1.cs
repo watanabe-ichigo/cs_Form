@@ -46,16 +46,24 @@ namespace cs_Form
 
              }*/
 
-            for (a = 0; a < 1000; a++)
+            for (a = 0; a < 10; a++)
             {
 
-                TestButton testButton = new TestButton((a % 100) * 100, (a / 100) * 100, 100, 100, a);
+                TestButton testButton = new TestButton((a % 5) * 100, (a / 5) * 100, 100, 100, a);
 
                 Controls.Add(testButton);
 
               
-
+                
             }
+
+            testlabel testLabel = new testlabel("ラベルです", 10, 300, 100, 500);
+            Controls.Add(testLabel);
+
+            //Label label = new Label();
+            //label.Location = new Point(30, 400);
+            //label.Text = "ラベルです";
+            //Controls.Add(label);
             
 
 
