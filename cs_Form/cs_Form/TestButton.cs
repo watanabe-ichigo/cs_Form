@@ -24,7 +24,18 @@ namespace cs_Form
 
             //ボタン内に文字を表示させる
 
-            Text = id.ToString();
+            string[] iw = new string[10];
+            iw[0] = "a";
+            iw[1] = "b";
+            iw[2] = "c";
+            iw[3] = "d";
+            iw[4] = "e";
+            iw[5] = "f";
+            iw[6] = "g";
+            iw[7] = "h";
+            iw[8] = "i";
+            iw[9] = "j";
+            Text = iw[id].ToString();
 
 
             //int k = 0;

@@ -29,7 +29,7 @@ namespace cs_Form
         /// <param name="str"></param>
         public void TextUpdate(string str)
         {
-            Text += str;
+            Text = str;
         }
     }
 

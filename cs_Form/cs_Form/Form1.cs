@@ -55,11 +55,11 @@ namespace cs_Form
             for (a = 0; a < 10; a++)
             {
 
-                TestButton testButton = new TestButton(this,(a % 5) * 100, (a / 5) * 100, 100, 100, a);
+
+                TestButton testButton = new TestButton(this,(a % 5) * 100, (a / 5) * 100, 100, 100,a);
 
                 Controls.Add(testButton);
-
-              
+                 
                 
             }
 
@@ -73,6 +73,8 @@ namespace cs_Form
             
 
         }
+
+        
 
         public void LabelTextUpdate(string str)
         {
