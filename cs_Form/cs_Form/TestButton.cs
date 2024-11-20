@@ -14,7 +14,7 @@ namespace cs_Form
         Form1 _form1;
 
 
-        public TestButton( Form1 form1,int x,int y, int widht, int height, string id )
+        public TestButton( Form1 form1,int x,int y, int widht, int height, int id )
         {
 
             _form1= form1;
@@ -22,7 +22,7 @@ namespace cs_Form
             //ClickイベントにOnClick関数を登録
             //ボタンをクリックした時に登録した関数を実行します。
             Click += OnClick;
-            Click += OnClick2;
+           
             
 
             //ボタン内に文字を表示させる
@@ -62,34 +62,21 @@ namespace cs_Form
             Size = new Size(widht,height);
         }
 
-
-        public void TextUpdate1(string id)
-        {
-            Text = id.ToString();
-        }
-
-
-
-
-
         public void OnClick(object sender, EventArgs s)
         {
+
+            string t =_form1.ButtonLabelReplacement(Text);
+
+            Text = t;
 
             _form1.LabelTextUpdate(Text);
 
 
         }
-        public void OnClick2(object sender, EventArgs d)
-        {
-
-            _form1.ButtonTextUpdate(Text);
+       
 
 
-        }
-
-
-
-      
+        
       
 
 

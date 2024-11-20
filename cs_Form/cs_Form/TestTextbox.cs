@@ -14,14 +14,14 @@ namespace cs_Form
         Button _button;
 
 
-        public TestTextbox(string id, int x, int y, int widht, int height)
+        public TestTextbox(string str, int x, int y, int widht, int height)
         {
 
             //ボタン内に文字を表示させる
 
 
-            Text = id.ToString();
-
+            //Text = str;
+            Text = str;
 
 
 
@@ -34,12 +34,15 @@ namespace cs_Form
             //ボタンの大きさ
             Size = new Size(widht, height);
         }
-        public void TextUpdate1(string id)
+        public string TextReplacement(string str)
         {
-            Text = id.ToString();
-        }
+            string temp = Text;
 
-       
+            Text = str;
+
+            return temp;
+
+        }
 
 
     }

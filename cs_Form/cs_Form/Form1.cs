@@ -11,18 +11,18 @@ using System.Windows.Forms;
 namespace cs_Form
 {
 
-    
+
 
     public partial class Form1 : Form
     {
 
         testlabel _testLabel;
 
-        TextBox _textBox;
+        TestTextbox _textBox;
 
         TestButton _button;
 
-        
+
 
 
 
@@ -60,23 +60,23 @@ namespace cs_Form
 
              }*/
 
-            //for (a = 0; a < 10; a++)
-            //{
+            for (a = 0; a < 10; a++)
+            {
 
 
-            //    TestButton testButton = new TestButton(this,(a % 5) * 100, (a / 5) * 100, 100, 100,a);
+                TestButton testButton = new TestButton(this, (a % 5) * 100, (a / 5) * 100, 100, 100, a);
 
-            //    Controls.Add(testButton);
-                  
-            //}
+                Controls.Add(testButton);
 
-          
-
+            }
 
 
 
 
-            _testLabel = new testlabel("ラベルです", 10, 300, 100, 500);
+
+
+
+            _testLabel = new testlabel("ラベルです", 10, 330, 100, 500);
             Controls.Add(_testLabel);
 
             _textBox = new TestTextbox("テキストボックスです", 10, 300, 500, 100);
@@ -84,7 +84,7 @@ namespace cs_Form
 
 
 
-            
+
 
             //Label label = new Label();
             //label.Location = new Point(30, 400);
@@ -94,15 +94,17 @@ namespace cs_Form
 
         }
 
-        
+
 
         public void LabelTextUpdate(string str)
         {
             _testLabel.TextUpdate(str);
         }
-        public void ButtonTextUpdate(string id)
+        public string ButtonLabelReplacement(string str)
         {
-            _button.TextUpdate1(id);
+            string s = _textBox.TextReplacement(str);
+
+            return s;
         }
 
     }
